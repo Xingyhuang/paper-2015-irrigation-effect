@@ -195,7 +195,7 @@ However, irrigation effects are usually ignored in climate models for several re
 
 %For example, \citet{adegoke2003impact} found reduced near-surface temperature over irrigated land in Nebraska, with the fraction of irrigation grid cells is set up to be saturated at 0000 UTC each day.  
 
-Although global climate models (GCMs) rarely account for irrigation, it is nonetheless meaningful to understand to what extent irrigation may affect the global climate patterns. \citet{lobell2006biogeophysical} coupled the community atmosphere model (CAM v3.0) to the community land model (CLM) 3.0 at $\sim$2-2.5$^\circ$ horizontal grid spacing to model irrigation by fixing soil moisture at saturation during the growing season in all croplands. Although this approach likely overcompensated for total added water, his results estimated that global irrigation led to a global land surface cooling of 1.3 K, and regional cooling of up to 8 K. \citet{lo2013irrigation} used CAM 3.5 along with the community land model (CLM v3.5) at $\sim$1.4$^\circ$, and showed that the increase in evapotranspiration and water vapor due to irrigation significantly impacts the atmospheric circulation in the southwestern United States {\color{red}with an anthropogenic loop in the regional hydrological cycle. [Confused - what is an anthropogenic loop?]}
+Although global climate models (GCMs) rarely account for irrigation, it is nonetheless meaningful to understand to what extent irrigation may affect the global climate patterns. \citet{lobell2006biogeophysical} coupled the community atmosphere model (CAM {\color{red}v3.0}) to the community land model (CLM) 3.0 at $\sim$2-2.5$^\circ$ horizontal grid spacing to model irrigation by fixing soil moisture at saturation during the growing season in all croplands. Although this approach likely overcompensated for total added water, his results estimated that global irrigation led to a global land surface cooling of 1.3 K, and regional cooling of up to 8 K. \citet{lo2013irrigation} used CAM 3.5 along with the community land model (CLM v3.5) at $\sim$1.4$^\circ$, and showed that the increase in evapotranspiration and water vapor due to irrigation significantly impacts the atmospheric circulation in the southwestern United States {\color{red}with an anthropogenic loop in the regional hydrological cycle. [Confused - what is an anthropogenic loop?]}
 
 %\citet{sacks2009effects} also used the CAM (add version here) coupled to the CLM (add version here) and compared global simulations with and without irrigation, and found that irrigation alters climate significantly in some regions with cooling effect of near surface temperature for about 0.5 K averaged over the year. $\sim$2.8$^\circ$ for sacks2009effects
 
@@ -212,6 +212,8 @@ Aforementioned studies that addressed the impact of irrigation either used RCMs 
 
 %Further, to properly account for interactions and teleconnections between scales, future projections of climate change should be simulated with global modeling systems.  
 
+%\citet{sorooshian2011significant} applied a RCM with rather fine-resolution at 4km for irrigation over CV for less than 5 years.
+
 %LAMs may suffer from potential inconsistencies between the global and regional scales and lack two-way interactions at the nest boundary \citep{warner1997tutorial, mcdonald2003transparent, laprise2008challenging, mesinger2013limited}, problems that can be mitigated with the use of VRGCMs. 
 %\citet{zarzycki2015effects} applied VR-CESM at 0.25$^\circ$  and fount that xx. \citet{Huang2015 studied and found that} \citet{Rhoades2015Characterizing} has also assessed the use of VR-CESM for modeling mountain snowpack in the western United States and found that.
 
@@ -221,7 +223,7 @@ This study applies the irrigation option in CLM 4.0 coupled in CESM 1.2.0 to inv
 
 \subsection{Irrigation scheme}
 
-As a state-of-the-art Earth modeling framework, CESM 1.2.0 consists of coupled atmospheric, oceanic, land and sea ice models \citep{neale2010description, hurrell2013community}. In this study, CAM version 5 (CAM5) \citep{CAM5Tech} and the Community Land Model (CLM) version 4.0 \citep{CLM40Tech} are used. The finest horizontal resolution of our grid is 0.25 $^\circ$ ($\sim$ 28km) covering the western U.S., with a quasi-uniform 1 $^\circ$ mesh over the remainder of the globe. Detailed descriptions of VR-CESM employed in this paper can be found in \cite{rhoades2015characterizing}, here, we only focus on the irrigation scheme within CLM 4.0. 
+As a state-of-the-art Earth modeling framework, CESM 1.2.0 consists of coupled atmospheric, oceanic, land and sea ice models \citep{neale2010description, hurrell2013community}. In this study, CAM version 5 (CAM5) \citep{CAM5Tech} and the Community Land Model (CLM) version 4.0 \citep{CLM40Tech} are used. The finest horizontal resolution of our grid is 0.25 $^\circ$ ($\sim$ 28km) covering the western U.S., with a quasi-uniform 1 $^\circ$ mesh over the remainder of the globe. Considering the relatively flat topography (less than 100m) over most of CV, the $\sim$ 28km grid resolution can satisfy our need for modeling irrigation effects. Detailed descriptions of VR-CESM employed in this paper can be found in \cite{rhoades2015characterizing}, here, we only focus on the irrigation scheme within CLM 4.0. 
 
 The irrigation modeling is implemented by applying a relatively realistic amount of irrigation water based on leaf area index (LAI) and explicitly calculate the effects on the surface water and energy balance, mostly like the way stated in \citep{sacks2009effects}. The fraction area of the cropland (independent of specific type) that equipped for irrigation is from \cite{siebert2005development, siebert2007global} matching year 2000, and is fixed over the simulation period (see Figure \ref{fig:Figure 1}). This is still reasonable since irrigated area has become stable in California since 1980 as stated in\cite{bonfils2007empirical}. 
 
@@ -260,7 +262,7 @@ w_{target,i} = (1-{\alpha})*w_{o,i} + {\alpha}*w_{sat,i}
 
 In order to understand the climate effects caused by irrigation, we have conducted a control run (named NRG) without irrigation and two irrigation-enabled runs, called IRG and IRG(0.5) respectively. The only difference between the two irrigation runs is that instead of using the default irrigation weight factor $\alpha$ of 0.7 as IRG, we adjusted the $\alpha$ to 0.5 in the IRG(0.5) run, to figure out whether and how different amounts of irrigated water can impact our results. Those three long-term simulations were performed over the time period from 1979-01-02 to 2005-12-31 (UTC) and 1979 is discarded as a spin-up period. This time period was chosen to provide an adequate sampling of annual variability, and to limit computational cost.
 
-%(Explain why 0.25 degree is enough to capture the pattern of mean climatology, e.g. topo)  ???
+%(Explain why 0.25 degree is enough to capture the pattern of mean climatology, e.g. topo) 
 
 For NRG run, we used the land cover dataset at 0.5 $^\circ$ fixed at year 2000. After this run, we found that there is another available land cover dataset at 3min($\sim$10 km) resolution in year 2000, which produced more realistic fraction of irrigated cropland at each grid cell over CV. Thus, we used that higher resolution for our irrigation runs. The land cover datasets are interpolated to our grid resolutions during the simulation.
 
@@ -278,7 +280,9 @@ Irrigation practice peaks in summer growing season \citep{salas2006estimating}, 
 %"Irrigation practice in California peaks in summer and is significant in spring but is rather sparse during the fall and winter seasons \citep{salas2006estimating}."
 %(no Detrend since the trend is too small) 
 
-We did not de-trend the datasets since the linear trend is too small. To restrict the analysis in our study region CV, relevant variables of the simulations and datasets have been masked under the boundary showed in Figure \ref{fig:Figure 1} containing 155 grid cells.
+To figure our how the irrigation-reduced cooling can affect the heat extremes over CV, we calculated the hot spell length, hot spell frequency, mean T$_{max}$ over the hot spells. A hot spell is identified by at least five consecutive days when T$_{max}$ exceeds a certain threshold. Since the 90th percentile of the daily JJA T$_{max}$ over 1980-2005 is around 38$^\circ$C over CV, we take 38$^\circ$C as the threshold here. Hot spell length is defined as the average duration length for all the hot spells over 26 years, and hot spell frequency is defined as the average number of hot spells per year, and mean T$_{max}$ is defined as the average T$_{max}$ over all the hot spell days. When capturing the hot spell, declustering is considered to make sure the data are serially independent of one another based on the schemes provided by Ferro and Segers (2003) \citep{ferro2003inference}, which is included in the R packaged \texttt{extReme} \citep{gilleland2011new} we used here.
+
+We did not de-trend the datasets since the linear trend is too small. To restrict the analysis in our study region CV, relevant variables of the simulations and datasets have been masked and/or averaged under the area defined by the boundary showed in Figure \ref{fig:Figure 1} containing 155 grid cells.
 
 add info for supplement: Complementary results to this study are provided in the online supplement, including the xxx.
 
@@ -320,9 +324,10 @@ The average JJA T$_{min}$, T$_{avg}$ and T$_{max}$ over 1980-2005 time period of
 
 %The T-test showed that the PRISM and UW are the same over CV for JJA Tmax, but not the same for JJA Tmin. NRRIG and IRRIG are not the same over CV for JJA Tmax, Tavg, IRRIG and NRRIG are not the same as PRISM over UW for T2, especially for Tmin and Tavg, though Tmax is partly the same as UW or PRISM over CV for IRRIG.
 
-In order to further figure out the potential underlying processes related with irrigation, we have looked into multiple relevant variables as summed in Table \ref{tab:table2}. Under irrigation, the specific humidity has increased about 15$\%$ and the sensible heat flux has decreased 16$\%$ mainly along with the cooler surface. Due to the scarcity of precipitation ($\sim$0.1 mm/day) and extreme hot summer over CV, the latent heat flux has largely increased for about 71$\%$ after adding $\sim$0.2 mm/day irrigated water for IRG(0.5), as further shown in Figure \ref{fig:Figure 3}. Ground evaporation is positively related with latent heat flux. The average soil moisture over all the subsurface layers has only increased a little ($\sim5\%$) under irrigation (also see Figure \ref{fig:Figure 3}). Although the irrigated water of IRG(0.5) is nearly half of what for IRG, they did not show notable differences for those variables, which explains the similar results of the near surface temperatures from these two irrigation runs as we discussed above. The possible reason may due to abnormally large surface runoff ($\sim$1.6 mm/day) for IRG0.7 comparing with IRG0.5 ($\sim$0.24 mm/day) ???.
+In order to further figure out the potential underlying processes related with irrigation, we have looked into multiple relevant variables as summed in Table \ref{tab:table2}. Under irrigation, the specific humidity has increased about 15$\%$ and the sensible heat flux has decreased 16$\%$ mainly along with the cooler surface. Due to the scarcity of precipitation ($\sim$0.1 mm/day) and extreme hot summer over CV, the latent heat flux has largely increased for about 71$\%$ after adding $\sim$0.2 mm/day irrigated water for IRG(0.5), as further shown in Figure \ref{fig:Figure 3}. Ground evaporation is positively related with latent heat flux. The average soil moisture over all the subsurface layers has only increased a little ($\sim5\%$) under irrigation (also see Figure \ref{fig:Figure 3}). Although the irrigated water of IRG(0.5) is nearly half of what for IRG, they did not show notable differences for those variables, which explains the similar results of the near surface temperatures from these two irrigation runs as we discussed above. The possible reason may due to abnormally large surface runoff ($\sim$1.6 mm/day) for IRG0.7 comparing with IRG0.5 ($\sim$0.24 mm/day) ??? the QSOIL is also abnormal.
 
-%the table used by Sacks: Table 2, it has the T-test, however, I think T-test is not necessary for these variables here.
+%CMIS has calculated ET dataset from http://wwwcimis.water.ca.gov/SpatialData.aspx, the map is in the supplement: etozonemap.jpg, it is about 6mm/day over CV, and the ET we got here is less than 2.5mm for IRG, < 1.5mm for NRG.
+%the table used by Sacks: Table 2, it has the T-test, however, I think T-test is not necessary for these variables here. ??
  
 We have also investigated the relationships among relevant variables based on the JJA values over 26 years to see if the land surface model works reasonably with irrigation. It turned out that, for IRG(0.5) irrigated water is positively correlated with soil moisture, however, this does not hold for IRG. And latent heat flux is positively correlated with soil moisture especially for IRG(0.5) and NRG. T$_{max}$ is positively correlated with irrigated water for in IRG(0.5) run but not correlated with soil moisture or latent heat flux. (add correlation coefficients here??) The boxplot in Figure \ref{fig:Figure 3} showed that both the average magnitude and variability of T$_{max}$ has been improved with irrigation. Though average precipitation did not differ among these three runs, adding irrigation tends to widen the distribution of precipitation intensity and bring more extreme precipitation occurrences.
 
@@ -334,6 +339,11 @@ We have also investigated the relationships among relevant variables based on th
 
 Since hot spells dominate during the summer season over CV, the frequency distribution of T$_{max}$ using all JJA daily values at each grid point over year 1981-2005 is depicted for all the runs and reference datasets including UW, PRISM and xx?? numbers of weather stations in Figure \ref{fig:Figure 4}. As we can see, compared with NRG, irrigation runs displayed much closer distribution to UW and PRISM, especially over the upper bound, though some colder bias is existed between lower bound and upper bound. The NRG run exhibited a clear warm bias associated with a long forward upper tail with maximum temperatures approaching near 50 $^\circ$C. Overall, though irrigation runs captures the general distribution of T$_{max}$, they are not so skewed to left and have more flat peaks than observations as told by the moments in Table \ref{tab:table3}.
 
+The hot spell features derived from of the simulations and UW dataset are tabulated in Table \ref{tab:table4}. We can see that, with irrigation, the simulations satisfactorily captured the hot spell features with close values to observations. Due to the cooling effect of irrigation, the duration and number of hot spells average over each year have both reduced about 30$\%$ comparing to the NRG run. The mean T$_{max}$ over hot spell between IRG and NRG did not show higher magnitude of difference than the average T$_{max}$ over JJA as above talked, and is around 40$^\circ$C, which is 2$^\circ$C higher than the threshold. This behavior that irrigation did not show larger effects on hot days than average summer day has also been observed by \citet{lobell2008irrigation}.
+
+%the effect of irrigation cooling
+
+%\citep{lobell2008irrigation}
 %7) A table about the heat extremes changes over JJA   plot the yearly heatwave length, and heatwave number trend. %this is kind of a problem since we just have one run. The PDF plot should be enough.
 %The good of fit of those distributions based on KS test showed all zero p value. changing the factor to 0.1, did not change the Tmax notably, the PDF may look better with lower underestimation (but the p value of the KS test is still all zero even for upper bound (extremely small ~0) ), it seems that the clm irrig model is too sensitive to irrigated water
 
@@ -348,7 +358,7 @@ Due to the important role CV plays in agricultural industry, we have also looked
 %LSMP for Tmax: PSL, U10, U850, V850, Z500, T500, T850, Q850: no related pattern
 
 %Irrigation: H2OSOI	volumetric soil water (vegetated landunits only)	mm3/mm3  the soil has 15 layers, but change only occurs to the first ten layers, particularly the first three layers. decide to calculate the average for 15 layers  0 to 0.05mm3/mm3 (JJA)
-%LHFLX  Surface latent heat flux  0-80 W/m2   strange square over colorado  check the surface type and the topo ???
+
 
 %net radiation is the surplus energy of net shortwave and net long wave radiation. This surplus energy is returned to the atmosphere as sensible heat and latent heat and heat exchange by conduction (very small). These heat fluxes arise as winds carry heat (sensible heat) and moisture (latent heat) away from the surface." http://www.cgd.ucar.edu/tss/aboutus/staff/bonan/ecoclim/1sted/Chapter07.pdf
 
@@ -359,41 +369,38 @@ With irrigation, the nighttime warming can occur and daily T$_{min}$ can increas
 %Based on regional model simulation, \citet{kanamaru2008model} argued that "the July daily minimum temperature in the California Central Valley increased by 3.5¡C, in agreement with station observation trends over the past century in the same area.
 %Christy et al. (2006) also indicated that the nighttime warming trend in the California Central Valley is likely related to irrigation. Bonfils and Lobell (2007) confirmed the daytime cooling indicated by Christy et al. (2006), but argued that their finding of nighttime warming is related to irrigation due to increased heat capacity of the soil and vegetation in the Central Valley.
 
-\cite{lo2013irrigation} found that the irrigation in the Central Valley results in higher precipitation rates ($\sim$15$\%$) over the southwestern U.S., together with enhancing summer monsoon rainfall. In our study, the specific humidity do increased for about 15$\%$ over irrigated area, and this increase also occurred over southern California (see Figure \ref{fig:Figure 6}) (updated the specific humidity plots over WUS), though, precipitation did not really enlarge (for about $\%$10) (this may due to legend) as \cite{lo2013irrigation} identified in a model. This gives evidence that irrigation in the Central Valley could change the regional hydrological cycle with water vapor transport, as 
+\cite{lo2013irrigation} found that the irrigation in the Central Valley results in higher precipitation rates ($\sim$15$\%$) over the southwestern U.S., together with enhancing summer monsoon rainfall. In our study, the specific humidity do increased for about 15$\%$ over irrigated area, and this increase also occurred over southern California (see Figure \ref{fig:Figure 6}) (updated the specific humidity plots over WUS), though, precipitation did not really enlarge (for about $\%$10) (this may due to legend) as \cite{lo2013irrigation} identified in a model. This gives another evidence that irrigation in the Central Valley could change the regional hydrological cycle with water vapor transport, by modifying the depths of planetary boundary layer, lifting condensation level and mixing layer \citep{segal1998potential, adegoke2003impact, deangelis2010evidence, qian2013modeling}. However, the cloud cover fraction either at low or high levels did not increase over CV, though \citet{kawase2008impact} argued that cloud formation can be increased with potentially enhanced shallow and deep convections by irrigation.
 
-%sacks2009effects: "The cooling effect of irrigation seemed to be dominated by indirect effects like an increase in cloud cover, rather than by direct evaporative cooling. The regional effects of irrigation were as large as those seen in previous studies of land cover change, showing that changes in land management can be as important as changes in land cover in terms of their climatic effects. Our results were sensitive to the area of irrigation, but were insensitive to the details of irrigation timing and delivery." why cloud cover???
+%sacks2009effects: "The cooling effect of irrigation seemed to be dominated by indirect effects like an increase in cloud cover, rather than by direct evaporative cooling. The regional effects of irrigation were as large as those seen in previous studies of land cover change, showing that changes in land management can be as important as changes in land cover in terms of their climatic effects. Our results were sensitive to the area of irrigation, but were insensitive to the details of irrigation timing and delivery."
 
-%The irrigation effects could potentially enhance shallow and deep convections and increase cloud formation [Kawase et al., 2008; Qian et al., 2013] and precipitation [DeAngelis et al., 2010; Koster et al., 2004; Segal et al., 1998] by modifying the depths of planetary boundary layer, lifting condensation level, and mixing layer.
+%The irrigation effects could potentially enhance shallow and deep convections and increase cloud formation \citep{kawase2008impact; Qian et al., 2013] and precipitation [DeAngelis et al., 2010; Koster et al., 2004; Segal et al., 1998] by modifying the depths of planetary boundary layer, lifting condensation level, and mixing layer.
 
-drip irrigation or flood irrigation
+As we showed, the irrigated water in IRG run is 0.473 mm/day in JJA averaged over CV, and this equals to 5.3 km$^3$ water in total. As we mentioned in the introduction part that, in year 2000, USGS reported about 42 km$^3$ of water is used over 41,000 km$^2$ of irrigated area in California. Assuming one third to half of the 42 km$^3$ of water is employed over CV during JJA, and that is about 14 to 21 km$^3$, which is nearly 3 to 4 times the amount put in the irrigation simulation. However, the irrigation scheme in CLM4.0 for our study can adjust the water deficit according to the actual soil moisture, and by assigning different irrigation weights, irrigated water can be increased or reduced accordingly, as similarly investigated by \citep{leng2013modeling}. However, in the model, intensified irrigation did not result in notable wetter soil or enhanced latent heat flux but increased surface runoff. And we also did five years' test run with reduced irrigation weight factor largely to 0.1, and results are still similar to the default irrigation run which has $\sim$2 times more irrigated water. It seems that the irrigation model is not sensitive to the amount of the irrigated water, which may due to the relative conservative soil moisture regulation (or fluctuation or soil water infiltration configurations or underground water replenish efficiency) or lack of realistic control for subsurface watershed. And the irrigated water evaporated too efficiently resulting in overcooled effect. 
+
+%the soil moisture tends to reach under no stress, rather than beyond that limit too much.
+% hydrologic states (soil moisture) and fluxes (interception, infiltration, runoff, evapotranspiration) 
+
+%"Our results suggest that irrigation amount simulated by CLM4 can be improved by calibrating model parameter values and accurate representation of the spatial distribution and intensity of irrigated areas. \citep{leng2013modeling}"
+%changing the factor to 0.0, we run the model for only 1985-08, and the QIRRIG (mm/day) in file cesm_25_irrig_rd_0.0_clm_08_1985.nc in folder HIST_VR-CESM_0.25_IRRIG_0.1 showed that the soil liquid water for NRG is still under stress, so water is added to get at least no stress. irrigated water is similar to the one with factor 0.1
+%changing the factor to 0.1, did not change the Tmax notably, the PDF may look better with lower underestimation (but the p value of the KS test is still all zero even for upper bound (extremely small ~0) ), it seems that the clm irrig model is not sensitive to irrigated water
+
+%sorooshian2011significant got that simulation results with fine model resolution and with the more realistic irrigation scheme indicate that the surface meteorological fields are noticeably improved when compared with observations from the CIMIS network and Moderate Resolution Imaging Spectroradiometer data. Our results also indicate that irrigation has significant impacts on local meteorological fields by decreasing temperature by 3¡Ð7¡C and increasing relative humidity by 9Ð20%, depending on model resolutions and allowable soil water depletion configurations. More significantly, our results using the improved model show that the effects of irrigation on weather and climate do not extend very far into nonirrigated regions. 
+
+% 0.473mm/day*92day/10^6 *155grids*28km^2 =  5.288 km^3 
+
+%irrigation water: kern County (CA): area 8140.964496 sq. mile., irrigated water 3.0 km cubic per year (year 2000), http://www.ssjid.com/district-services/agriculture-irrigation-water.htm: Irrigation season runs from approximately March 15 to October 15, depending on the weather and water supplies. 
+%We assume that there are 180 days of equal irrigation, with QRRIG at 1.5mm/day (irrigated factor = 0.7), the total irrigated water will be 5.627 km^3/year, for kern County; with QRRIG at 1.5/2 mm/day (irrigated factor = 0.5), the value is about 2.8, near 3.0 km^3/year. \citep{ozdogan2010simulating}  recalculate this the mean QIRRIG for factor 0.7 is about 0.6mm/day for 365 days
+
+%improve of the irrigation modeling: (see Sack2009)
+
+With current intense drought, over-pumping groundwater would result in more and more dry soil. And irrigation-induced cooling could be slowdown, which makes the Central Valley even more vulnerable to future greenhouse-induced warming \citep{bonfils2007empirical, williams2015contribution}.
+
+%the benefit of irrigation cooling ???
+%drip irrigation or flood irrigation 
 
 %"In California, the end of irrigation expansion since 1980 is likely to persist in the future, as urban areas and water demand continue to expand (35) and irrigation water sources decline (either by overdrafting existing groundwater systems and rivers or by potential shifts in stream-flow timing or rainfall patterns). A recession in irrigation-induced cooling associated with projected future greenhouse-induced warming would result in substantial warming in the Central Valley, which could have strong, negative effects on agriculture. 
 %"The suppression of past human-induced greenhouse warming by increased irrigation is therefore likely to slow in the future, and a potential decrease in irrigation may even contribute to a more rapid warming. Changes in irrigation alone are not expected to influence broad-scale temperatures, but they may introduce large uncertainties in climate projections for irrigated agricultural regions, which provide 40$\%$ of global food production. \citep{bonfils2007empirical}"  "The Central Valley may be particularly vulnerable to warming-driven drought if reductions in water supply cause reductions in irrigation, as irrigation has slowed warming in this region. \citep{williams2015contribution}" 
-
-%"Our results suggest that irrigation amount simulated by CLM4 can be improved by calibrating model parameter values and accurate representation of the spatial distribution and intensity of irrigated areas. \citep{leng2013modeling}"
-
-impact for future projections
-
-why only JJA: extra water will be run off rather than soil moisture or latent heat flux
-
-The IRG0.5 and IRG0.7
-
-irrigation water: kern County (CA): area 8140.964496 sq. mile., irrigated water 3.0 km cubic per year (year 2000), http://www.ssjid.com/district-services/agriculture-irrigation-water.htm: Irrigation season runs from approximately March 15 to October 15, depending on the weather and water supplies. 
-
-%We assume that there are 180 days of equal irrigation, with QRRIG at 1.5mm/day (irrigated factor = 0.7), the total irrigated water will be 5.627 km^3/year, for kern County; with QRRIG at 1.5/2 mm/day (irrigated factor = 0.5), the value is about 2.8, near 3.0 km^3/year. \citep{ozdogan2010simulating}  recalculate this the mean QIRRIG for factor 0.7 is about 0.6mm/day for 365 days
-
-%changing the factor to 0.0, we run the model for only 1985-08, and the QIRRIG (mm/day) in file cesm_25_irrig_rd_0.0_clm_08_1985.nc in folder HIST_VR-CESM_0.25_IRRIG_0.1 showed that the soil liquid water for NRG is still under stress, so water is added to get at least no stress. irrigated water is similar to the one with factor 0.1
-
-%changing the factor to 0.1, did not change the Tmax notably, the PDF may look better with lower underestimation (but the p value of the KS test is still all zero even for upper bound (extremely small ~0) ), it seems that the clm irrig model is too sensitive to irrigated water
-
-%improve of the irrigation modeling: only irrigate over growing season and others (see Sack2009)
-
-%the cloud fraction: no meaningful difference
-
-%sorooshian2011significant got that simulation results with fine model resolution and with the more realistic irrigation scheme indicate that the surface meteorological fields are noticeably improved when compared with observations from the CIMIS network and Moderate Resolution Imaging Spectroradiometer data. Our results also indicate that irrigation has significant impacts on local meteorological fields by decreasing temperature by 3¡Ð7¡C and increasing relative humidity by 9Ð20%, depending on model resolutions and allowable soil water depletion configurations. More significantly, our results using the improved model show that the effects of irrigation on weather and climate do not extend very far into nonirrigated regions.
-
-%alfaro2006prediction  cite this paper's result for discussion
-%hamlet2007twentieth cite this paper's result for discussion
+ 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %lo2013irrigation: Whereas the first-order effect of Central Valley irrigation results in a net land surface cooling and increases atmospheric water vapor locally in California, the second-order effect of Central Valley irrigation results in higher precipitation rates over the southwestern United States, including enhancing summer monsoon rainfall and strengthening the regional water cycle.We demonstrate in a model a clear mechanism that the water vapor transport resulting from irrigation initiates atmospheric instabilities over the southwestern United States, where soil moisture feedback and lateral water vapor convergence also play an important role in increasing precipitation in the region. We also identify that irrigation in the Central Valley initiates a previously unknown, anthropogenic loop in the regional hydrological cycle, in which summer precipitation is increased by 15%, causing a corresponding increase in Colorado River streamflow of ~30%.
@@ -413,7 +420,7 @@ irrigation water: kern County (CA): area 8140.964496 sq. mile., irrigated water 
 
 %\section{Tables and Figures}
 
-%(0)     72.66662/0.469   155 grid,  28km*28km   the total water for JJA is about 5.24km^3
+
 \clearpage
 
 %\begin{table}
@@ -453,7 +460,21 @@ irrigation water: kern County (CA): area 8140.964496 sq. mile., irrigated water 
 \hline \textbf{VR-CESM IRG} & 7.852 & 104.752 & 2.913 & 62.574 & 0.119 & 0.473 & 1.610 & 0.907 & 176.795 & 79.439 & 0.018 & 1.237 \\
 \textbf{VR-CESM NRG} & 6.994 & 123.211 & 3.061 & 36.563 & 0.107 & 0.000 & 0.015 & 0.163 & 169.424 & 75.582 & 0.016 & 1.084  \\
 \textbf{VR-CESM IRG(0.5)} & 7.782 & 105.730 & 2.926 & 61.695 & 0.118 & 0.212 & 0.236 & 0.892 & 176.728 & 78.366 & 0.017 & 1.222  \\
-\hline
+
+%%1980 JJA
+%\textbf{VR-CESM IRG} & 7.642 & 104.438 & 2.911 & 62.268 & 0.065 & 0.537 & 1.913 & 0.884 & 178.506 & 79.429 & 0.011 & 1.256 \\
+%\textbf{VR-CESM NRG} & 6.870 & 128.118 & 3.050 & 31.679 & 0.096 & 0.000 & 0.011 & 0.112 & 170.782 & 72.247 & 0.017 & 0.966 \\
+%\textbf{VR-CESM IRG(0.5)} & 7.436 & 109.835 & 2.935 & 57.378 & 0.143 & 0.206 & 0.229 & 0.816 & 177.725 & 77.499 & 0.017 & 1.150 \\
+%\textbf{VR-CESM IRG(0.1)} & 7.184 & 103.446 & 2.866 & 60.355 & 0.122 & 0.141 & 0.158 & 0.828 & 175.833 & 78.293 & 0.013 & 1.244 \\
+%\textbf{VR-CESM IRG(0.0$\_$0.5)} & 6.790 & 111.746 & 2.987 & 46.410 & 0.056 & 0.060 & 0.066 & 0.504 & 169.938 & 78.139 & 0.008 & 1.091 \\
+%
+%%1985-08
+%\textbf{VR-CESM IRG} & 7.558 & 101.686 & 2.779 & 48.829 & 0.036 & 0.423 & 1.508 & 0.721 & 156.087 & 77.652 & 0.006 & 0.960 \\
+%\textbf{VR-CESM NRG} & 6.936 & 120.663 & 2.928 & 22.670 & 0.099 & 0.000 & 0.011 & 0.081 & 148.988 & 70.685 & 0.015 & 0.687 \\
+%\textbf{VR-CESM IRG(0.5)} & 7.597 & 98.940 & 2.804 & 48.647 & 0.372 & 0.173 & 0.226 & 0.750 & 152.527 & 75.964 & 0.039 & 0.891 \\
+%\textbf{VR-CESM IRG(0.1)} & 7.749 & 92.683 & 2.699 & 50.819 & 0.020 & 0.154 & 0.146 & 0.774 & 153.341 & 75.713 & 0.004 & 0.978 \\
+%\textbf{VR-CESM IRG(0.0)} & 6.438 & 103.834 & 2.826 & 43.693 & 0.008 & 0.140 & 0.126 & 0.668 & 151.099 & 73.398 & 0.001 & 0.840 \\
+
 \end{tabular*}
 \end{center}
 \end{table}
@@ -473,17 +494,28 @@ irrigation water: kern County (CA): area 8140.964496 sq. mile., irrigated water 
 \begin{tabular}{p{6in}}
 \small\textbf{Notes:} If skew $>0$ [skew $<0$], the distribution trails off to the right [left]. If kurtosis $> 0$ [$<0$], a sharper [flatter] peak compared to a normal distribution (leptokurtic and platykurtic, respectively) is expected.
 \end{tabular}
-
-
 \end{table}
 
+\begin{table}
+\caption{The JJA hot spell features for models and UW observation over CV.} \label{tab:table4}
+\begin{tabular*}{3.0in}{l @{\extracolsep{\fill}}cccc}
+\hline & NRG & IRG & IRG(0.5) & UW \\
+\hline \textbf{Hot spell length} & 9.637 & 7.014 & 6.483 & 6.930 \\               
+\textbf{Hot spell frequency} & 2.220 & 1.500 & 1.505 & 1.539 \\  
+\textbf{Tmax} &  40.496 & 39.806 & 39.887 & 39.720 \\       									
+\hline
+\end{tabular*}
+\end{table}
+
+%may add Heat index, or using at least 6 days whether to add PRISM, try to plot box plot for this to see what it will look like
+
 %%%%%%%%%%%%%%%%%%
-%hwl, hwn, Tmax, Tmin
+%hwl, hwn, Tmax, Tmin T90th
 %IRG 6.136 $\ $ 29.952 $\ $ 38.703 $\ $ 20.500 $\ $ 
 %NRG 6.557 $\ $ 32.760 $\ $ 40.682 $\ $ 21.547 $\ $ 
 %IRG(0.5) 6.145 $\ $ 30.992 $\ $ 38.902 $\ $ 20.859 $\ $
 
-%hwl, hwn, Tmax, Tmin
+%hwl, hwn, Tmax, Tmin T90th
 %with r2h
 %6.290 $\ $ 29.536 $\ $ 37.923 $\ $ 20.596 $\ $ 
 %6.458 $\ $ 31.694 $\ $ 38.857 $\ $ 21.392 $\ $ 
@@ -495,7 +527,7 @@ irrigation water: kern County (CA): area 8140.964496 sq. mile., irrigated water 
 %14.591 $\ $ 2.878 $\ $ 38.087 $\ $ 38.338 $\ $ 19.756 $\ $ 
 %9.013 $\ $ 2.846 $\ $ 26.132 $\ $ 37.548 $\ $ 20.195 $\ $
 %
-%9.533 $\ $ 2.722 $\ $ 26.240 $\ $ 37.679 $\ $ 18.085 $\ $
+%UW 9.533 $\ $ 2.722 $\ $ 26.240 $\ $ 37.679 $\ $ 18.085 $\ $
 %
 %36
 %9.195 $\ $ 2.171 $\ $ 19.683 $\ $ 38.303 $\ $ 21.109 $\ $ 
@@ -569,15 +601,15 @@ irrigation water: kern County (CA): area 8140.964496 sq. mile., irrigated water 
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{irrigatedArea.pdf}
-\caption{The fraction of irrigated cropland at each grid cell (unit: $\%$). (Blue line is the boundary of the CV region.}
+\caption{The fraction of irrigated cropland at each grid cell (unit: $\%$) (Blue line is the boundary of the CV region.).}
 \label{fig:Figure 1}
 \end{center}
 \end{figure}
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=6in]{irrig_2dplot_v2.pdf}
-\caption{.}
+\includegraphics[width=6in]{irrig_2dplot.pdf}
+\caption{Average JJA T$_{max}$, T$_{min}$ and T$_{avg}$ over year 1980-2005 for models and observations (unit: $^\circ$C).}
 \label{fig:Figure 2}
 \end{center}
 \end{figure}
@@ -589,8 +621,6 @@ irrigation water: kern County (CA): area 8140.964496 sq. mile., irrigated water 
 \label{fig:Figure 3}
 \end{center}
 \end{figure}
-
-%add irrigated water in Figure 3 ??
 
 \begin{figure}
 \begin{center}
