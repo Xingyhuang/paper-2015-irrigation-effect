@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  20 NOV 2015 12:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  25 NOV 2015 18:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -420,37 +420,17 @@ t line 283.
 [2]
 
 Package natbib Warning: Citation `lobell2008irrigation' on page 3 undefined on 
-input line 342.
+input line 345.
 
 [3] (./irrigationImpact.bbl [4] [5]) [6]
-Overfull \hbox (50.025pt too wide) in paragraph at lines 442--451
+Overfull \hbox (50.025pt too wide) in paragraph at lines 505--529
  [] 
- []
-
-
-Overfull \hbox (31.8138pt too wide) in alignment at lines 458--478
-[] [] [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (50.025pt too wide) in paragraph at lines 458--479
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 484--493
-
- []
-
-
-Overfull \hbox (11.91396pt too wide) in alignment at lines 501--507
-[] [] [] [] [] 
  []
 
 <irrigatedArea.pdf, id=36, 614.295pt x 794.97pt>
 File: irrigatedArea.pdf Graphic file (type pdf)
  <use irrigatedArea.pdf>
-Package pdftex.def Info: irrigatedArea.pdf used on input line 603.
+Package pdftex.def Info: irrigatedArea.pdf used on input line 687.
 (pdftex.def)             Requested size: 433.62pt x 561.15749pt.
 
 
@@ -459,7 +439,7 @@ found PDF version <1.6>, but at most version <1.5> allowed
 <irrig_2dplot.pdf, id=37, 614.295pt x 794.97pt>
 File: irrig_2dplot.pdf Graphic file (type pdf)
  <use irrig_2dplot.pdf>
-Package pdftex.def Info: irrig_2dplot.pdf used on input line 611.
+Package pdftex.def Info: irrig_2dplot.pdf used on input line 695.
 (pdftex.def)             Requested size: 433.62pt x 561.15749pt.
 
 
@@ -468,26 +448,26 @@ pdfTeX warning: /usr/texbin/pdflatex (file ./irrig_boxplot.pdf): PDF inclusion:
 <irrig_boxplot.pdf, id=38, 614.295pt x 794.97pt>
 File: irrig_boxplot.pdf Graphic file (type pdf)
  <use irrig_boxplot.pdf>
-Package pdftex.def Info: irrig_boxplot.pdf used on input line 619.
+Package pdftex.def Info: irrig_boxplot.pdf used on input line 703.
 (pdftex.def)             Requested size: 433.62pt x 561.15749pt.
 
 <irrig_pdf_v3.pdf, id=39, 614.295pt x 794.97pt>
 File: irrig_pdf_v3.pdf Graphic file (type pdf)
  <use irrig_pdf_v3.pdf>
-Package pdftex.def Info: irrig_pdf_v3.pdf used on input line 627.
+Package pdftex.def Info: irrig_pdf_v3.pdf used on input line 711.
 (pdftex.def)             Requested size: 433.62pt x 561.15749pt.
 
 <irrig_hours_T2>=35_v2.pdf, id=40, 614.295pt x 794.97pt>
 File: irrig_hours_T2>=35_v2.pdf Graphic file (type pdf)
 
 <use irrig_hours_T2>=35_v2.pdf>
-Package pdftex.def Info: irrig_hours_T2>=35_v2.pdf used on input line 635.
+Package pdftex.def Info: irrig_hours_T2>=35_v2.pdf used on input line 719.
 (pdftex.def)             Requested size: 433.62pt x 561.15749pt.
 
 <irrig_discussion.pdf, id=41, 614.295pt x 794.97pt>
 File: irrig_discussion.pdf Graphic file (type pdf)
  <use irrig_discussion.pdf>
-Package pdftex.def Info: irrig_discussion.pdf used on input line 644.
+Package pdftex.def Info: irrig_discussion.pdf used on input line 728.
 (pdftex.def)             Requested size: 433.62pt x 561.15749pt.
 
 
@@ -503,27 +483,28 @@ Here is how much of TeX's memory you used:
  7015 multiletter control sequences out of 15000+600000
  14271 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,11n,25p,1926b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,14n,25p,2215b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2013/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmss8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmti8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmti9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mtt9.pfb>
-Output written on irrigationImpact.pdf (13 pages, 3955904 bytes).
+ype1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2013/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmss8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmti9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmtt9.pfb>
+Output written on irrigationImpact.pdf (13 pages, 4012940 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
+ 273 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
