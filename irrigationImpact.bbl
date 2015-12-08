@@ -1,4 +1,4 @@
-\begin{thebibliography}{44}
+\begin{thebibliography}{48}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -54,11 +54,27 @@ Famiglietti, J., M.~Lo, S.~Ho, J.~Bethune, K.~Anderson, T.~Syed, S.~Swenson,
   groundwater depletion in california's central valley, \textit{Geophysical
   Research Letters}, \textit{38}(3).
 
+\bibitem[{\textit{Ferro and Segers}(2003)}]{ferro2003inference}
+Ferro, C.~A., and J.~Segers (2003), Inference for clusters of extreme values,
+  \textit{Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology)}, \textit{65}(2), 545--556.
+
+\bibitem[{\textit{Foley et~al.}(2003)\textit{Foley, Costa, Delire, Ramankutty,
+  and Snyder}}]{foley2003green}
+Foley, J.~A., M.~H. Costa, C.~Delire, N.~Ramankutty, and P.~Snyder (2003),
+  Green surprise? how terrestrial ecosystems could affect earth's climate,
+  \textit{Frontiers in Ecology and the Environment}, \textit{1}(1), 38--44.
+
 \bibitem[{\textit{Fox-Rabinovitz et~al.}(1997)\textit{Fox-Rabinovitz,
   Stenchikov, Suarez, and Takacs}}]{fox1997finite}
 Fox-Rabinovitz, M.~S., G.~L. Stenchikov, M.~J. Suarez, and L.~L. Takacs (1997),
   {A finite-difference GCM dynamical core with a variable-resolution stretched
   grid}, \textit{Monthly Weather Review}, \textit{125}(11), 2943--2968.
+
+\bibitem[{\textit{Gilleland and Katz}(2011)}]{gilleland2011new}
+Gilleland, E., and R.~W. Katz (2011), New software to analyze how extremes
+  change over time, \textit{Eos, Transactions American Geophysical Union},
+  \textit{92}(2), 13--14.
 
 \bibitem[{\textit{Hamlet and Lettenmaier}(2005)}]{hamlet2005production}
 Hamlet, A.~F., and D.~P. Lettenmaier (2005), {Production of Temporally
@@ -136,6 +152,12 @@ Lobell, D., G.~Bala, and P.~Duffy (2006), Biogeophysical impacts of cropland
 Lobell, D.~B., and C.~Bonfils (2008), The effect of irrigation on regional
   temperatures: A spatial and temporal analysis of trends in california,
   1934-2002, \textit{Journal of Climate}, \textit{21}(10), 2063--2071.
+
+\bibitem[{\textit{Lobell et~al.}(2008)\textit{Lobell, Bonfils, Kueppers, and
+  Snyder}}]{lobell2008irrigation}
+Lobell, D.~B., C.~J. Bonfils, L.~M. Kueppers, and M.~A. Snyder (2008),
+  Irrigation cooling effect on temperature and heat index extremes,
+  \textit{Geophysical Research Letters}, \textit{35}(9).
 
 \bibitem[{\textit{Mahmood et~al.}(2006)\textit{Mahmood, Foster, Keeling,
   Hubbard, Carlson, and Leeper}}]{mahmood2006impacts}
