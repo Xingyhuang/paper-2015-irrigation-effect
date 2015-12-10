@@ -1,4 +1,4 @@
-\begin{thebibliography}{48}
+\begin{thebibliography}{47}
 \providecommand{\natexlab}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
@@ -95,12 +95,6 @@ Hurrell, J.~W., M.~M. Holland, P.~R. Gent, S.~Ghan, J.~E. Kay, P.~Kushner,
 Kanamaru, H., and M.~Kanamitsu (2008), Model diagnosis of nighttime minimum
   temperature warming during summer due to irrigation in the california central
   valley, \textit{Journal of Hydrometeorology}, \textit{9}(5), 1061--1072.
-
-\bibitem[{\textit{Kawase et~al.}(2008)\textit{Kawase, Yoshikane, Hara, Kimura,
-  Sato, and Ohsawa}}]{kawase2008impact}
-Kawase, H., T.~Yoshikane, M.~Hara, F.~Kimura, T.~Sato, and S.~Ohsawa (2008),
-  Impact of extensive irrigation on the formation of cumulus clouds,
-  \textit{Geophysical Research Letters}, \textit{35}(1).
 
 \bibitem[{\textit{Kueppers et~al.}(2007)\textit{Kueppers, Snyder, and
   Sloan}}]{kueppers2007irrigation}
