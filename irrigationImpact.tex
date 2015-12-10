@@ -299,7 +299,7 @@ For comparison, we employ two high-quality gridded observational datasets (UW an
 
 %Differences between gridded observations can be due to choice of meteorological stations, interpolation techniques, elevation models and processing algorithms. Consequently, the use of multiple reference datasets is necessary to understand the underlying uncertainty in the observational data. Detailed descriptions of these datasets are as follows.
 
-\paragraph{UW:} The UW daily gridded meteorological data is obtained from the Surface Water Modeling group at the University of Washington \citep{maurer2002long, hamlet2005production}. The dataset is provided at 0.125$^\circ$ horizontal resolution covering the period from year 1949 to 2010 with daily time frequency. This study used variables Tmax and Tmin from the dataset.
+\paragraph{UW} The UW daily gridded meteorological data is obtained from the Surface Water Modeling group at the University of Washington \citep{maurer2002long, hamlet2005production}. The dataset is provided at 0.125$^\circ$ horizontal resolution covering the period from year 1949 to 2010 with daily time frequency. This study used variables Tmax and Tmin from the dataset.
 
 %UW uses a simple 6.1 K/km lapse rate for topographic effect. 
 %With a good station coverage over California [including both the U.S. Historical Climatology Network (HCN) and Cooperative network observations (COOP)], a high 1/8¡  1/8¡ resolution and adjustment for urbanization effects, the UW data set (38) represents our best candidate to study the contribution of irrigation to temperature variations in California.
@@ -308,11 +308,11 @@ For comparison, we employ two high-quality gridded observational datasets (UW an
 
 %For applications of the radiation and humidity data please cite thornton1999improved, thornton2000simultaneous
 
-\paragraph{PRISM:} The Parameter-elevation Regressions on Independent Slopes Model (PRISM) \citep{daly2008physiographically} 4 km gridded dataset is also employed in this study.  This model ingests point measurements and applies a weighted regression scheme that accounts for key factors affecting the local climatology. PRISM is the United States Department of Agriculture's official climatological dataset. Monthly climatological variables are available for 1895 through 2015 and daily data for 1981 to 2015 {\color{red}from the PRISM Climate Group (Oregon State University, \url{http://prism.oregonstate.edu}, created 4 Feb 2004) [A citation is better than a URL]}. This study makes use of monthly Tmax, Tmin, Tavg, and daily Tmax.
+\paragraph{PRISM} The Parameter-elevation Regressions on Independent Slopes Model (PRISM) \citep{daly2008physiographically} 4 km gridded dataset is also employed in this study.  This model ingests point measurements and applies a weighted regression scheme that accounts for key factors affecting the local climatology. PRISM is the United States Department of Agriculture's official climatological dataset. Monthly climatological variables are available for 1895 through 2015 and daily data for 1981 to 2015 {\color{red}from the PRISM Climate Group (Oregon State University, \url{http://prism.oregonstate.edu}, created 4 Feb 2004) [A citation is better than a URL]}. This study makes use of monthly Tmax, Tmin, Tavg, and daily Tmax.
 
 %The datasets include total precipitation and minimum/maximum, (derived) mean temperatures and dewpoints. 
 
-\paragraph{NCDC:} Weather station measurements over the CV are obtained from the Global Historical Climate Network (GHCN) and provided by NOAA/NCDC, {\color{red}\url{http://www.ncdc.noaa.gov/} [Citation better than URL]}). An even distribution of weather stations within the study region was chosen from all stations with at least 90$\%$ observations of Tmax and Tmin over all JJA days from 1980 to 2005.  Consequently, approximately 20 weather stations were employed for recorded Tmax and Tmin.
+\paragraph{NCDC} Weather station measurements over the CV are obtained from the Global Historical Climate Network (GHCN) and provided by NOAA/NCDC, {\color{red}\url{http://www.ncdc.noaa.gov/} [Citation better than URL]}). An even distribution of weather stations within the study region was chosen from all stations with at least 90$\%$ observations of Tmax and Tmin over all JJA days from 1980 to 2005.  Consequently, approximately 20 weather stations were employed for recorded Tmax and Tmin.
 
 %weather station dataset http://gis.ncdc.noaa.gov/map/viewer/#app=cdo&cfg=cdo&theme=daily&layers=111&node=gis
 %In all cases, the stations cover well both high and low irrigated areas  %central valley weather station dataset, together with UW: for mean Tmax, Tmin it turns out that UW is very close to weather station datasets and almost the same as PRISM
@@ -331,15 +331,16 @@ The average JJA Tmin, Tavg and Tmax over the 1980-2005 time period from all simu
 
 %The T-test showed that the PRISM and UW are the same over CV for JJA Tmax, but not the same for JJA Tmin. NRRIG and IRRIG are not the same over CV for JJA Tmax, Tavg, IRRIG and NRRIG are not the same as PRISM over UW for T2, especially for Tmin and Tavg, though Tmax is partly the same as UW or PRISM over CV for IRRIG.
 
-In order to further figure out the potential underlying processes related with irrigation, we have looked into multiple relevant variables as summed in Table \ref{tab:table2}. Under irrigation, the specific humidity has increased about 15$\%$ and the sensible heat flux has decreased 16$\%$ mainly along with the cooler surface. Due to the scarcity of precipitation ($\sim$0.1 mm/day) and extreme hot summer over CV, the latent heat flux has largely increased for about 71$\%$ after adding $\sim$1.27 mm/day irrigated water for IRG(0.5), as further shown in Figure \ref{fig:Figure 3}. Ground evaporation is positively related with latent heat flux. The average soil moisture over all the subsurface layers has only increased a little ($\sim5\%$) under irrigation, but this increase is significant according the T-test result (also see Figure \ref{fig:Figure 3}). Although the irrigated water of IRG(0.5) is nearly half of what for IRG, they did not show notable differences for those variables, which explains the similar results of the near surface temperatures from these two irrigation runs as we discussed above. The possible reason may due to abnormally large surface runoff ($\sim$1.6 mm/day) for IRG0.7 comparing with IRG0.5 ($\sim$0.24 mm/day) .
+In order to understand the processes by which the irrigation model effects surface cooling, we have tabulated key variables in Table \ref{tab:table2}. Box and whisker plots showing the interannual variability are given in Figure \ref{fig:Figure 3}.  With irrigation enabled, the specific humidity increased by about 15$\%$ and the sensible heat flux decreased by 16$\%$. The scarcity of natural precipitation ($\sim$0.1 mm/day) and summertime heating has led to a 456\% increase {\color{red}[Check]} in ground evaporation and a 71\% increase in latent heat flux after adding $\sim$1.27 mm/day irrigated water for IRG(0.5). Nonetheless, the average soil moisture over all the subsurface layers has only shown a slight increase ($\sim5\%$) under irrigation, although the value is statistically significant under the t-test ($p < 0.05$) {\color{red}[Check my p value]}.  This result suggests that irrigated water does not effectively infiltrate into lower soil layers. Although the irrigated water added in IRG(0.5) was nearly half of that of IRG, it did not lead to significant differences among relevant variables, and simply lead to larger runoff in IRG ($\sim$1.6 mm/day) compared with IRG(0.5) ($\sim$0.24 mm/day).
 
+{\color{red}[Explain briefly how the process actually works, rather than simply giving numerical values -- why does higher latent heat flux lead to lower Tmax?]}
 
 %CMIS has calculated ET dataset from http://wwwcimis.water.ca.gov/SpatialData.aspx, the map is in the supplement: etozonemap.jpg, it is about 6mm/day over CV, and the ET we got here is less than 2.5mm for IRG, < 1.5mm for NRG.
 %the table used by Sacks: Table 2, it has the T-test, however, I think T-test is not necessary for these variables here. 
- 
-We have also investigated the relationships among relevant variables based on the JJA values over 26 years to see if the land surface model works reasonably with irrigation. It turned out that, for IRG(0.5) irrigated water is positively correlated with soil moisture, however, this does not hold for IRG. And latent heat flux is positively correlated with soil moisture especially for IRG(0.5) and NRG. Tmax is positively correlated with irrigated water for in IRG(0.5) run but not correlated with soil moisture or latent heat flux. {\color{red}(add correlation coefficients here} The boxplot in Figure \ref{fig:Figure 3} showed that both the average magnitude and variability of Tmax has been improved with irrigation. Though average precipitation did not differ among these three runs, adding irrigation tends to widen the distribution of precipitation intensity and bring more extreme precipitation occurrences. {\color{red}(say more about this box plot)}
 
-{\color{red}add how the surface runoff is produced}
+Relationships among relevant variables were also investigated to determine if the land surface and irrigation models exhibited reasonable behavior. Although in IRG(0.5) irrigated water is positively correlated with soil moisture, this does not hold for IRG {\color{red}[Is this simply because IRG saturates?  In that case it's a misunderstanding of the correlation coefficient]}.  As expected, latent heat flux is positively correlated with soil moisture especially for IRG(0.5) and NRG. Although Tmax is positively correlated with irrigated water in IRG(0.5), it is not correlated with soil moisture or latent heat flux. {\color{red}(add correlation coefficients here} The box and whisker plot in Figure \ref{fig:Figure 3} show that both the average magnitude and variability of Tmax has been improved with irrigation. Though average precipitation did not differ among these three runs, adding irrigation tends to widen the distribution of precipitation intensity and bring more extreme precipitation events. {\color{red}(say more about this box plot)}
+
+{\color{red}[add how the surface runoff is produced]}
 
 %Water table depth is positively correlated with soil liquid water for IRG and IRG(0.5), especially for IRG(0.5), however, water table depth is strongly negatively correlated with soil liquid water for NRG (???).
 %we found that soil moisture of JJA is positively related with that of MAM for all runs but not for VIC datasets, JJA is not really related with SON for NRG, IRG, but related for IRG(0.5).
@@ -347,11 +348,11 @@ We have also investigated the relationships among relevant variables based on th
 
 %shortwave and long wave albedo have about 0.4% difference for NGR and two IRGs, this should be due to the different use of land surface datasets. Higher albedo causes warmer for NGR to some extent. so whether we should run another 3min land surface dataset for NRG?
 
-Since hot spells dominate during the summer season over CV, the frequency distribution of Tmax using all JJA daily values at each grid point over year 1981-2005 is depicted for all the runs and reference datasets including UW, PRISM and 21 weather stations (with area weight) in Figure \ref{fig:Figure 4}. As we can see, the NRG run exhibited a clear warm bias associated with a long forward upper tail with maximum temperatures approaching near 50 $^\circ$C. Compared with NRG, irrigation runs displayed much closer distribution to UW and PRISM, especially over the upper bound, though some colder bias is existed between lower bound and upper bound. Overall, though irrigation runs captures the general distribution of Tmax, they are not so skewed to left and have more flat peaks than observations as told by the moments in Table \ref{tab:table3}.
+To assess the ability of irrigation to modulate maximum temperature, Figure \ref{fig:Figure 4} shows the frequency distribution of Tmax using all JJA daily values at each grid point over year 1981-2005 has been plotted for all runs and reference datasets including UW, PRISM and 21 weather stations (area weighted).  Overall, the NRG run exhibited an exceptional warm bias associated with a long forward tail with maximum temperatures approaching 50 $^\circ$C. However, with irrigation enabled there was much closer agreement with UW and PRISM, especially in the upper tail, although a slight cold bias is apparent. Further, the first four moments of the frequency distribution all showed improvement under irrigation (Table \ref{tab:table3}).  {\color{red}[More discussion is necessary here as to why stations disagree with gridded data]}
 
 %using Voronoi diagram
 
-The hot spell features derived from of the simulations and UW dataset (PRISM is similar to UW, not shown) are tabulated in Table \ref{tab:table4}. We can see that, with irrigation, the simulations satisfactorily captured the hot spell features with close values to observations. Due to the cooling effect of irrigation, the duration and number of hot spells averaged over each year have both reduced about 30$\%$ comparing to the NRG run. The mean Tmax over hot spell between IRG and NRG did not show higher magnitude of difference than the average Tmax over JJA as above talked, and is around 40$^\circ$C, which is 2$^\circ$C higher than the threshold. This behavior that irrigation did not show larger effects on hot days than average summer day has also been observed by \citet{lobell2008irrigation}.
+Hot spell features derived from simulations and the UW dataset are tabulated in Table \ref{tab:table4} (results from PRISM were effectively equivalent to UW). Although hot spells were too long and too frequent without irrigation, once irrigation was enabled, length and duration were closely matched to UW by the model.  Notably, the cooling effect associated with irrigation led to a reduction in length and frequency of hot spells of about 30\%.  Notably, the difference in Tmax between IRG and NRG runs when averaged over hot spells was slightly smaller in magnitude when compared with differences in seasonally averaged Tmax. The observation that irrigation had no greater impact on hot days, compared with average summer days, was also found by \citet{lobell2008irrigation}.
 
 %the effect of irrigation cooling
 
@@ -359,7 +360,7 @@ The hot spell features derived from of the simulations and UW dataset (PRISM is 
 %7) A table about the heat extremes changes over JJA   plot the yearly heatwave length, and heatwave number trend. %this is kind of a problem since we just have one run. The PDF plot should be enough.
 %The good of fit of those distributions based on KS test showed all zero p value. changing the factor to 0.1, did not change the Tmax notably, the PDF may look better with lower underestimation (but the p value of the KS test is still all zero even for upper bound (extremely small ~0) ), it seems that the clm irrig model is too sensitive to irrigated water
 
-Due to the important role CV plays in agricultural industry, we have also looked at the heat stress for crops. We calculated the hours that exceeding a threshold over each day of JJA based on the hourly outputs from year 2000 (only this year has hourly output) and averaged the value over CV area. Here we chose 35 $^\circ$C to be our threshold as used in \cite{teixeira2013global}. As Figure \ref{fig:Figure 5} showed, both the heat stress intensity and frequency have reduced under irrigation. The average hours over all days in this JJA are 2.152 for NRG and 1.424 for IRG (about 34$\%$ less).
+Due to the important role CV plays in agricultural industry, we have also looked at the heat stress for crops. To do so, we calculated the hours that exceeded 35$^\circ$C over each day of JJA based on the hourly outputs from year 2000 (when hourly output was available) and averaged the value over CV area {\color{red}[Is this enough data?]}. Here we chose 35 $^\circ$C to be our threshold as used in \cite{teixeira2013global}. As shown in Figure \ref{fig:Figure 5}, both the heat stress intensity and frequency are reduced under irrigation. The average hours over all days in this JJA are 2.152 for NRG and 1.424 for IRG (about 34$\%$ less).
 
 %Daily trend of latent heat flux, and ground evaporation, plant evaportranspiration; crop heat stress \citep{teixeira2013global}   \ref{fig:Figure 5}
 %Use the restart file rh0 from irrig*with*0.5 to restart irrigation with 0.7, and use the nrg to run nrg. 
@@ -467,7 +468,7 @@ With current intense drought, over-pumping groundwater would result in more and 
 %%%%%Table 1%%%%%%%%%%%%
 \begin{table}
 \begin{center}
-\caption{RMSD, MSD and Corr of Tmax between models and observations over CV in JJA from 1980-2005.} \label{tab:table1}
+\caption{RMSD, MSD and Corr of Tmax between models and observations over CV in JJA from 1980-2005. {\color{red}[Define RMSD, MSD and Corr in text]}} \label{tab:table1}
 \begin{tabular*}{4in}{l @{\extracolsep{\fill}}cccccccccccc}
 \hline \textbf{JJA} & UW  & PRISM \\
 \hline $    $ & RMSD $\ $ MSD $\ $ Corr & RMSD $\ $ MSD $\ $ Corr \\
@@ -519,7 +520,7 @@ With current intense drought, over-pumping groundwater would result in more and 
 %%%%%%%Table 2%%%%%%%%%%%%%%%%
 \begin{table}
 \begin{center}
-\caption{Values of multiple variables over CV from models in JJA from 1980-2005.} \label{tab:table2}
+\caption{Key variables associated with irrigation in the CV over all 1980-2005 JJA seasons. {\color{red}[Why the asterisks?]}} \label{tab:table2}
 \begin{tabular*}{7.5in}{l @{\extracolsep{\fill}}cccccccccccc}
 \hline & 2m specific & Sensible  & 10m wind* & Latent & Precipitation & Irrigated  & Surface  & Ground  & Soil \\ % & Rnet  & QVEGE & QVEGT  \\
 &  humidity* & heat flux* & & heat flux* & & water* & runoff* & evaporation* & moisture* \\
@@ -644,12 +645,12 @@ With current intense drought, over-pumping groundwater would result in more and 
 %%%%%%%Table 4%%%%%%%%%%%%%%%
 \begin{table}
 \begin{center}
-\caption{The mean hot spell features for models and UW observation over CV in JJA from 1980-2005.} \label{tab:table4}
+\caption{Variables associated with hot spells from simulations and gridded UW data over CV for JJA 1980-2005.} \label{tab:table4}
 \begin{tabular*}{3.5in}{l @{\extracolsep{\fill}}cccc}
 \hline & NRG & IRG & IRG(0.5) & UW \\
 \hline \textbf{Hot spell length} & 9.637 & 7.014 & 6.483 & 6.930 \\               
 \textbf{Hot spell number} & 2.220 & 1.500 & 1.505 & 1.539 \\  
-\textbf{Tmax} &  40.496 & 39.806 & 39.887 & 39.720 \\       									
+\textbf{Hot spell Tmax} &  40.496 & 39.806 & 39.887 & 39.720 \\       									
 \hline
 \end{tabular*} 
 \end{center}
