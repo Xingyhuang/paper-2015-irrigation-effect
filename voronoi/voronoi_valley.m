@@ -1,6 +1,6 @@
 function area = voronoi_valley()
 
-cvs = load('cv_station_Tx_v2.txt');
+cvs = load('cv_station_Tx_v3.txt');
 cvb = load('cv_boundary.txt');
 
 n = 1000;
