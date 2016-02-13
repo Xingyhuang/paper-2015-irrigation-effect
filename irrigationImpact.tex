@@ -47,7 +47,7 @@
 % (If you are submitting to a journal other than jgrga,
 % substitute the initials of the journal for "jgrga" below.)
 
-\documentclass[draft,grl]{agutex}   %draft, [ms]
+\documentclass[draft,ms]{agutex}   %draft, [ms]
 % To create numbered lines:
 
 % If you don't already have lineno.sty, you can download it from
@@ -318,12 +318,12 @@ To restrict the analysis to the CV, the variables of interest have been masked a
 RMSD &= \sqrt{\frac{1}{N} \sum_{i=1}^{N} (v_i - \hat{v}_i)^2}  & MSD &= \frac{1}{N} \sum_{i=1}^{N} (v_i - \hat{v}_i) 
 \end{align} where $v_i$ and $\hat{v}_i$ are values from the simulation output and reference dataset respectively; $i$ is the grid-point index and N is the total number of grid points over specific regions.
 
-Throughout the remainder of this paper, student's t-test has been used to test whether two sets of 26 seasonal averaged data at each grid point or spatially averaged over CV are the same, evaluated at the $\alpha = 0.05$ significance level. T-test is used here when the sample population can be described adequately or at least approximately by a normal distribution, where normality is assessed under the Anderson-Darling test. {\color{red}A Kolmogorov-Smirnov test is applied to assess whether the frequency distributions of Tmax for NRG and IRG simulations are significantly different.}
+Throughout the remainder of this paper, student's t-test has been used to test whether two sets of 26 seasonal averaged data at each grid point or spatially averaged over CV are the same, evaluated at the $\alpha = 0.05$ significance level. T-test is used here when the sample population can be described adequately or at least approximately by a normal distribution, where normality is assessed under the Anderson-Darling test.
 
 %spatial correlation: no weighting, uncentered computing Pearson product-moment coefficient of linear correlation. 
 
 %{\color{red} Complementary results to this study are provided in the online supplement, including the xxx.}
-{\color{red}check the supplement}
+%{\color{red}check the supplement}
 
 \subsection{Reference datasets}
 
@@ -365,9 +365,7 @@ For comparison, we employ two high-quality gridded observational datasets (UW an
 
 The average JJA Tmin, Tavg and Tmax over the 1980-2005 time period from all simulations and gridded datasets is depicted in Figure \ref{fig:Figure 3}. Relative to the gridded datasets, it can be seen that NRG has a prominent overestimation of Tmax, with MSD values of $\sim$0.75 K and RMSD values of $\sim$1.7 K (see Table \ref{tab:table1}). The cooling effect caused by irrigation can be clear seen in the Tmax field when comparing NRG and IRG results, showing significant difference (as hatched in Figure 3). Notably, no statistically significant difference in temperatures arises from reducing the irrigation factor from 0.7 to 0.5. Although the IRG run shows a slight cold bias with an MSD of $\sim$ -0.36 K (which is slightly reduced in IRG(0.5) to $\sim$ -0.2 K), this effect is limited to the base of the Sierra Nevada and the Delta region.
 
-Compared with NRG, the RMSD of Tmax for IRG(0.5) is only reduced by about 20$\%$ from PRISM, which appears to be due to the offset effects caused by the non-irrigated grid cells around our study region's boundary. Though Tmin reduced for about 0.5 K in IRG compared to NRG over irrigated area, all three runs have a warm bias relative to reference datasets. The net result was that Tavg was overestimated in NRG over the CV, except in regions influenced by the Delta sea breeze. On the other hand, IRG showed a slight cool bias in Tavg after alleviating the overestimation of Tmax in the northern and southern reaches of the CV, with significant difference from NRG. Over non-irrigated area, the results are almost the same for all the runs, suggesting that temperature modulation is largely a local phenomenon.
-
-{\color{red} add the correlation?}
+Compared with NRG, the RMSD of Tmax for IRG(0.5) is only reduced by about 20$\%$ from PRISM, which appears to be due to the offset effects caused by the non-irrigated grid cells around our study region's boundary. Though Tmin reduced for about 0.5 K in IRG compared to NRG over irrigated area, all three runs have a warm bias relative to reference datasets. The net result was that Tavg was overestimated in NRG over the CV, except in regions influenced by the Delta sea breeze. On the other hand, IRG showed a slight cool bias in Tavg after alleviating the overestimation of Tmax in the northern and southern reaches of the CV, with significant difference from NRG. The correlation coefficients between simulations and reference datasets are about 0.76 to 0.86, indicating that VR-CESM can capture the overall spatial distributions of temperature. Though NRG and IRG are highly correlated with each other (>=0.95), it just means that the spatial pattern of IRG is quite similar to NRG under spatially consistent cooling. Over non-irrigated area, the results are almost the same for all the runs, suggesting that temperature modulation is largely a local phenomenon.
 
 %Southern CV is hotter than Northern CV, Northern CV has higher soil moisture than Southern CV.
 
@@ -399,7 +397,7 @@ With irrigation enabled, the specific humidity increased by about 12$\%$ due to 
 
 %As expected, latent heat flux is positively correlated with soil moisture especially for IRG(0.5) and NRG. Although Tmax is positively correlated with irrigated water in IRG(0.5), it is not correlated with soil moisture or latent heat flux. {\color{red}(add correlation coefficients here} 
 
-Based on the seasonal averaged values over 26 years, the distributions of selected variables are displayed by the box and whisker diagram in Figure \ref{fig:Figure 4}. With irrigation, both the average magnitude and annual variability of Tmax become notably closer to observations. Compared to NRG, the range of Tmax for irrigation runs reduced to $\sim$3$^\circ$C from $\sim$4.5$^\circ$C with less concentrated distribution. Although the mean latent heat flux almost doubles for irrigation runs, the main features of distribution did not really differ from NRG. Average precipitation did not notably change among these three runs, however, adding irrigation tends to widen the range of precipitation intensity, which may due to enhanced convective processes. Also, NRG captures the distribution of JJA precipitation better than the IRG, with reduced variability, though the reference datasets (i.e. UW and PRISM) also differ a little from each other. The range and variability of soil moisture significantly decreased after adding more irrigated water, especially when looking at the two irrigation runs.
+Based on the JJA averaged values over 26 years, the distributions of selected variables are displayed by the box and whisker diagram in Figure \ref{fig:Figure 4}. With irrigation, both the average magnitude and annual variability of Tmax become notably closer to observations. Compared to NRG, the range of Tmax for irrigation runs reduced to $\sim$3$^\circ$C from $\sim$4.5$^\circ$C with less concentrated distribution. Although the mean latent heat flux almost doubles for irrigation runs, the main features of distribution did not really differ from NRG. Average precipitation did not notably change among these three runs, however, adding irrigation tends to widen the range of precipitation intensity, which may due to enhanced convective processes. Also, NRG captures the distribution of JJA precipitation better than the IRG, with reduced variability, though the reference datasets (i.e. UW and PRISM) also differ a little from each other. The range and variability of soil moisture significantly decreased after adding more irrigated water, especially when looking at the two irrigation runs.
 
 %ad.test shows the Tmax follows normal distribution, then using t-test: p-value between NRG, and other four is less than 0.05. IRG and IRG0.5 is not sig. different. IRG and UW,PRISM are not sig. different, so does IRG(0.5). For Pr, it is not normal, and they seem not be sig. different. For latent heat flux, they are normal, NRG is different from IRG and IRG(0.5), IRG and IRG(0.5) are not sig. dif. For soil moisture, they are normal. NRG is different from IRG and IRG(0.5), IRG and IRG(0.5) is similar, with p-value around 0.05 by ks.test.
 
@@ -415,8 +413,9 @@ Based on the seasonal averaged values over 26 years, the distributions of select
 
 %shortwave and long wave albedo have about 0.4% difference for NGR and two IRGs, this should be due to the different use of land surface datasets. Higher albedo causes warmer for NGR to some extent. so whether we should run another 3min land surface dataset for NRG?
 
-To further assess the ability of irrigation to modulate maximum temperature, the frequency distribution of Tmax is depicted (see Figure \ref{fig:Figure 5}) based on all JJA daily values at each grid point over year 1981-2005 for all runs and reference datasets including UW, PRISM and 11 weather stations (area weighted using Voronoi diagram). Overall, the NRG run exhibited an obvious warm bias associated with a long forward tail with Tmax approaching 48$^\circ$C. However, with irrigation enabled there was much closer agreement with UW and PRISM, especially in the upper tail, although a slight cold bias is apparent. Further, the first four moments of the frequency distribution all showed improvement under irrigation (Table \ref{tab:table3}).
+To further assess the ability of irrigation to modulate maximum temperature, the frequency distribution of Tmax is depicted (see Figure \ref{fig:Figure 5}) based on all JJA daily values at each grid point over year 1981-2005 for all runs and reference datasets including UW, PRISM and 11 weather stations (area weighted using Voronoi diagram). Overall, the NRG run exhibited an obvious warm bias associated with a long forward tail with Tmax approaching 48$^\circ$C. However, with irrigation enabled there was much closer agreement with UW and PRISM, especially in the upper tail, although a slight cold bias is apparent. Further, the first four moments of the frequency distribution all showed improvement under irrigation (Table \ref{tab:table3}). We have applied the Kolmogorov-Smirnov (KS) test to the averaged Tmax over CV for the 26 years (i.e. 26 values for each dataset) to see if the distributions of these runs are statistically significantly different. The KS test results showed that at the significance level of 0.1, compared to gridded observations, NRG is significant different, but not for IRG.
 
+%p-value of NRG and PRISM is 0.0885, NRG and UW is 0.04179, IRG and PRISM is 0.3071. NRG and IRG is 0.002561. see the dataset in the daily trend_multiple variables (version 1).xlsx.
 %{\color{red}[More discussion is necessary here as to why stations disagree with gridded data] Huang: After checking the elevation of the station, it seems that majority of the stations are distributed over higher elevations. However the elevation difference is within 100m.}
 
 %using Voronoi diagram
@@ -466,7 +465,9 @@ With irrigation employed, nighttime warming is expected to occur, leading to an 
 %Based on regional model simulation, \citet{kanamaru2008model} argued that "the July daily minimum temperature in the California Central Valley increased by 3.5¡C, in agreement with station observation trends over the past century in the same area.
 %Christy et al. (2006) also indicated that the nighttime warming trend in the California Central Valley is likely related to irrigation. Bonfils and Lobell (2007) confirmed the daytime cooling indicated by Christy et al. (2006), but argued that their finding of nighttime warming is related to irrigation due to increased heat capacity of the soil and vegetation in the Central Valley.
 
-\cite{lo2013irrigation} found that the irrigation in the Central Valley results in higher precipitation rates (on the order of $\sim$15$\%$) over the southwestern U.S., along with enhanced summer monsoon rainfall. In our study, the specific humidity did show a statistically significant increase of about 12$\%$ over the irrigated area, but this did not directly lead to a statistically significant increase in average precipitation (observed to be about 18$\%$). Notably, the moisture flux did not differ between NRG and IRG over the irrigated area and its surroundings. However, in our study low cloud cover did increase by about 10$\%$ over the irrigated region, which corroborates with the observation of \citet{kawase2008impact} that cloud formation could increase as a result of enhanced convection. 
+\cite{lo2013irrigation} found that the irrigation in the Central Valley results in higher precipitation rates (on the order of $\sim$15$\%$) over the southwestern U.S., along with enhanced summer monsoon rainfall. In our study, the specific humidity did show a statistically significant increase of about 12$\%$ over the irrigated area, but this did not directly lead to a statistically significant increase in average precipitation (observed to be about 18$\%$) or the low-level cloud. Notably, the moisture flux did not differ between NRG and IRG over the irrigated area and its surroundings. And we did not notice an enhanced hydrological cycle with water vapor transport as \cite{lo2013irrigation}. 
+
+%However, in our study low cloud cover did increase by about 10$\%$ over the irrigated region, which corroborates with the observation of \citet{kawase2008impact} that cloud formation could increase as a result of enhanced convection. 
 
 %However, we did not find notable increase of precipitation or cloud cover over the down-wind region
 
@@ -864,7 +865,7 @@ The authors would like to thank Dr. Travis O'Brien and Dr. Richard Grotjahn for 
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{irrigatedArea.pdf}
-\caption{The fraction of irrigated cropland at each grid cell (percent).  The black line sketchies the boundary of the CV region.}
+\caption{The percent of irrigated cropland at each grid cell.  The black line sketchies the boundary of the CV region.}
 \label{fig:Figure 2}
 \end{center}
 \end{figure}
@@ -880,7 +881,7 @@ The authors would like to thank Dr. Travis O'Brien and Dr. Richard Grotjahn for 
 \begin{figure}
 \begin{center}
 \includegraphics[width=6in]{irrig_boxplot.pdf}
-\caption{Box plots for (a) Tmax, (b) Latent heat flux, (c) Precipitation, and (e) Soil moisture.  From top to bottom, horizontal lines represent maximum value, third quartile, median, first quartile and minimum value, respectively.} 
+\caption{Box plots for JJA averaged  (a) Tmax, (b) Latent heat flux, (c) Precipitation, and (e) Soil moisture.  From top to bottom, horizontal lines represent maximum value, third quartile, median, first quartile and minimum value, respectively.} 
 \label{fig:Figure 4}
 \end{center}
 \end{figure}
